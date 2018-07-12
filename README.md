@@ -1,5 +1,5 @@
 # Esotery
-This game is written in Java 1.8.0 using MVC. Players need to use mouse to control the character, making them become strong and explore the world. Players do not need to use keyboard.
+This game is written in Java 1.8.0 using MVC. Players need to use mouse to control the character, making them become strong and explore the Esotery world. Players do not need to use keyboard.
 
 # File structure
 
