@@ -1,0 +1,156 @@
+[
+    {
+        "mapID": 1,
+        "name": "峡谷1",
+        "description": "一座不知名的峡谷",
+        "forwardEventID": 0,
+        "backEventID": 0,
+        "leftEventID": 0,
+        "rightEventID": 10002,
+        "npc": [
+            1001
+        ],
+        "monster": []
+    },
+    {
+        "mapID": 2,
+        "name": "峡谷2",
+        "description": "一座不知名的峡谷",
+        "forwardEventID": 10004,
+        "backEventID": 0,
+        "leftEventID": 10001,
+        "rightEventID": 10003,
+        "npc": [],
+        "monster": [
+            2001
+        ]
+    },
+    {
+        "mapID": 3,
+        "name": "峡谷3",
+        "description": "一座不知名的峡谷",
+        "forwardEventID": 0,
+        "backEventID": 0,
+        "leftEventID": 10002,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": [
+            2001,
+            2001
+        ]
+    },
+    {
+        "mapID": 4,
+        "name": "通道1",
+        "description": "深不见底的通道",
+        "forwardEventID": 10005,
+        "backEventID": 20002,
+        "leftEventID": 0,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": []
+    },
+    {
+        "mapID": 5,
+        "name": "通道2",
+        "description": "深不见底的通道",
+        "forwardEventID": 10006,
+        "backEventID": 10004,
+        "leftEventID": 0,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": []
+    },
+    {
+        "mapID": 6,
+        "name": "通道3",
+        "description": "深不见底的通道",
+        "forwardEventID": 10007,
+        "backEventID": 10005,
+        "leftEventID": 0,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": []
+    },
+    {
+        "mapID": 7,
+        "name": "石室",
+        "description": "中间有一座石台的石室，石台上方插有一把剑。",
+        "forwardEventID": 0,
+        "backEventID": 20002,
+        "leftEventID": 0,
+        "rightEventID": 0,
+        "npc": [
+            3001
+        ],
+        "monster": []
+    },
+    {
+        "mapID": 8,
+        "name": "草原1",
+        "description": "四周只有一望无际的草原。",
+        "forwardEventID": 10009,
+        "backEventID": 0,
+        "leftEventID": 0,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": [
+            2002
+        ]
+    },
+    {
+        "mapID": 9,
+        "name": "草原2",
+        "description": "四周只有一望无际的草原。",
+        "forwardEventID": 10012,
+        "backEventID": 10008,
+        "leftEventID": 10010,
+        "rightEventID": 10011,
+        "npc": [],
+        "monster": [
+            2002
+        ]
+    },
+    {
+        "mapID": 10,
+        "name": "草原3",
+        "description": "四周只有一望无际的草原。",
+        "forwardEventID": 0,
+        "backEventID": 0,
+        "leftEventID": 0,
+        "rightEventID": 10009,
+        "npc": [],
+        "monster": [
+            2002,
+            2002
+        ]
+    },
+    {
+        "mapID": 11,
+        "name": "草原4",
+        "description": "四周只有一望无际的草原。。",
+        "forwardEventID": 0,
+        "backEventID": 0,
+        "leftEventID": 10009,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": [
+            2002,
+            2002
+        ]
+    },
+    {
+        "mapID": 12,
+        "name": "草原5",
+        "description": "一望无际的草原前方，隐隐约约出现了一个村子。",
+        "forwardEventID": 0,
+        "backEventID": 10009,
+        "leftEventID": 0,
+        "rightEventID": 0,
+        "npc": [],
+        "monster": [
+            2002,
+            2002
+        ]
+    }
+]

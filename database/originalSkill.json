@@ -1,0 +1,16 @@
+[
+   {
+      "skillID":1,
+      "name":"攻击",
+      "description":"普通的攻击，对敌人造成物理伤害",
+      "cost":0,
+      "skillEffectList":[
+          {
+              "target": 1,
+              "attributeBased": 3,
+              "attributeTarget": 1,
+              "value": 1
+          }
+      ]
+   }
+]

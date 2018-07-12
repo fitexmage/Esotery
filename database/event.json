@@ -1,0 +1,316 @@
+[
+    {
+        "eventID": 10001,
+        "description": "峡谷1",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 1
+            }
+        ]
+    },
+    {
+        "eventID": 10002,
+        "description": "峡谷2",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 2
+            }
+        ]
+    },
+    {
+        "eventID": 10003,
+        "description": "峡谷3",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 3
+            }
+        ]
+    },
+    {
+        "eventID": 10004,
+        "description": "通道1",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 4
+            }
+        ]
+    },
+    {
+        "eventID": 10005,
+        "description": "通道2",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 5
+            }
+        ]
+    },
+    {
+        "eventID": 10006,
+        "description": "通道3",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 6
+            }
+        ]
+    },
+    {
+        "eventID": 10007,
+        "description": "石室",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 7
+            }
+        ]
+    },
+    {
+        "eventID": 10008,
+        "description": "草原1",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 8
+            }
+        ]
+    },
+    {
+        "eventID": 10009,
+        "description": "草原2",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 9
+            }
+        ]
+    },
+    {
+        "eventID": 10010,
+        "description": "草原3",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 10
+            }
+        ]
+    },
+    {
+        "eventID": 10011,
+        "description": "草原4",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 11
+            }
+        ]
+    },
+    {
+        "eventID": 10012,
+        "description": "草原5",
+        "eventActionList": [
+            {
+                "type": 1,
+                "actionID": 12
+            }
+        ]
+    },
+    {
+        "eventID": 20001,
+        "description": "进入峡谷",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 2000101
+            },
+            {
+                "type": 2,
+                "actionID": 2000102
+            },
+            {
+                "type": 2,
+                "actionID": 2000103
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 20002,
+        "description": "通道封住",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 2000201
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 20003,
+        "description": "通道封住",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 2000301
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 21001,
+        "description": "游戏作者对话",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 2100101
+            },
+            {
+                "type": 2,
+                "actionID": 2100102
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 22001,
+        "description": "蝙蝠对话",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 2200101
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 23001,
+        "description": "石中剑对话",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 2300101
+            },
+            {
+                "type": 2,
+                "actionID": 4200101
+            },
+            {
+                "type": 2,
+                "actionID": 2300102
+            },
+            {
+                "type": 2,
+                "actionID": 2300103
+            },
+            {
+                "type": 1,
+                "actionID": 8
+            },
+            {
+                "type": 9,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 31001,
+        "description": "游戏作者对战",
+        "eventActionList": [
+            {
+                "type": 2,
+                "actionID": 3100101
+            },
+            {
+                "type": 3,
+                "actionID": 1001
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 32001,
+        "description": "蝙蝠对战",
+        "eventActionList": [
+            {
+                "type": 3,
+                "actionID": 2001
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 32002,
+        "description": "鹿对战",
+        "eventActionList": [
+            {
+                "type": 3,
+                "actionID": 2002
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 41001,
+        "description": "获得苹果",
+        "eventActionList": [
+            {
+                "type": 4,
+                "actionID": 1001
+            },
+            {
+                "type": 2,
+                "actionID": 4100101
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    },
+    {
+        "eventID": 42001,
+        "description": "获得石中剑",
+        "eventActionList": [
+            {
+                "type": 4,
+                "actionID": 2001
+            },
+            {
+                "type": 2,
+                "actionID": 4200101
+            },
+            {
+                "type": 1,
+                "actionID": 0
+            }
+        ]
+    }
+]

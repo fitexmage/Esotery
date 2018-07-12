@@ -1,0 +1,98 @@
+[
+    {
+        "dialogID": 1,
+        "content": "战斗失败，继续修炼吧！",
+        "speaker": "战斗结果",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2,
+        "content": "逃跑成功！",
+        "speaker": "战斗结果",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2000101,
+        "content": "这是哪里？",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2000102,
+        "content": "我不是在上课吗？",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2000103,
+        "content": "还是先探索一下吧。",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2000201,
+        "content": "洞口被封住了，只能先往前走走看了。",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2000301,
+        "content": "洞口被封住了，但前方的石台上有一把剑，不如试试能不能拔出来。",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2100101,
+        "content": "欢迎来到埃索泰尔大陆。",
+        "speaker": "游戏作者",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2100102,
+        "content": "有问题请联系作者fitexmage@126.com。",
+        "speaker": "游戏作者",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2200101,
+        "content": "唧唧唧！",
+        "speaker": "蝙蝠",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2300101,
+        "content": "用力拔剑。",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2300102,
+        "content": "原来这么轻易就可以拔出来。",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 2300103,
+        "content": "但怎么感觉……哪里不对？",
+        "speaker": "player",
+        "choiceID": []
+    },
+    {
+        "dialogID": 3100101,
+        "content": "竟敢挑战我？",
+        "speaker": "游戏作者",
+        "choiceID": []
+    },
+    {
+        "dialogID": 4100101,
+        "content": "获得苹果*1！",
+        "speaker": "获得物品",
+        "choiceID": []
+    },
+    {
+        "dialogID": 4200101,
+        "content": "获得剑！",
+        "speaker": "获得物品",
+        "choiceID": []
+    }
+]

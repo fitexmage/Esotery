@@ -1,0 +1,12 @@
+[
+   {
+      "conditionID":1,
+      "content":"进入峡谷",
+      "condition":false
+   },
+   {
+      "conditionID":2,
+      "content":"获得宝物",
+      "condition":false
+   }
+]
