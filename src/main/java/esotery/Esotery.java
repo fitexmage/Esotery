@@ -5,6 +5,9 @@
  */
 package esotery;
 
+import esotery.controller.LoginCntl;
+import esotery.model.Player;
+import esotery.model.Data;
 import javafx.application.Application;
 import javafx.event.*;
 import javafx.stage.*;
