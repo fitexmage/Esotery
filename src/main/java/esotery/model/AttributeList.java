@@ -53,7 +53,7 @@ public class AttributeList extends dataList {
     //查找指定属性
     public Attribute getTheAttribute(int thePlayerID) {
         for (Attribute theAttribute : attributeList) {
-            if (theAttribute.getPlayerID() == thePlayerID) {
+            if (theAttribute.playerID == thePlayerID) {
                 return theAttribute;
             }
         }
@@ -63,7 +63,7 @@ public class AttributeList extends dataList {
     //更新指定属性
     public void updateTheAttribute(Attribute newAttribute) {
         for (Attribute theAttribute : attributeList) {
-            if (theAttribute.getPlayerID() == newAttribute.getPlayerID()) {
+            if (theAttribute.playerID == newAttribute.playerID) {
                 theAttribute.update(newAttribute);
             }
         }

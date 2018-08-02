@@ -18,9 +18,9 @@ public class Attribute extends Character implements Serializable {
     int gender; //性别 1: 男, 2: 女
     int role; //职业 1: 战士 2: 刺客 3:法师
     int location; //当前位置
-    //int level; //等级,因为有get,所以必须要
+    int level; //等级,因为有get,所以必须要
     int exp; //经验值
-    //int neededExp; //下一级需要达到的经验值,因为有get,所以必须要
+    int neededExp; //下一级需要达到的经验值,因为有get,所以必须要
 
     public Attribute(int playerID, Character theCharacter, int gender, int role, int location, int exp) {
         super(theCharacter.name, theCharacter.race, theCharacter.hp, theCharacter.maxHp, theCharacter.mp, theCharacter.maxMp, theCharacter.str, theCharacter.def, theCharacter.intl, theCharacter.agi);
@@ -119,5 +119,75 @@ public class Attribute extends Character implements Serializable {
                 changeAbility(3, 5, 1, 1, 6, 1);
                 break;
         }
+    }
+
+    /**
+     * @return the playerID
+     */
+    public int getPlayerID() {
+        return playerID;
+    }
+
+    /**
+     * @param playerID the playerID to set
+     */
+    public void setPlayerID(int playerID) {
+        this.playerID = playerID;
+    }
+
+    /**
+     * @return the gender
+     */
+    public int getGender() {
+        return gender;
+    }
+
+    /**
+     * @param gender the gender to set
+     */
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    /**
+     * @return the role
+     */
+    public int getRole() {
+        return role;
+    }
+
+    /**
+     * @param role the role to set
+     */
+    public void setRole(int role) {
+        this.role = role;
+    }
+
+    /**
+     * @return the location
+     */
+    public int getLocation() {
+        return location;
+    }
+
+    /**
+     * @param location the location to set
+     */
+    public void setLocation(int location) {
+        this.location = location;
+    }
+
+    /**
+     * @return the exp
+     */
+    public int getExp() {
+        return exp;
+    }
+
+    /**
+     * @param exp the exp to set
+     */
+    public void setExp(int exp) {
+        this.exp = exp;
     }
 }

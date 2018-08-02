@@ -151,7 +151,7 @@ public class Character implements Serializable, Cloneable {
         }
     }
 
-    //根据编号改变能力,参数为要改变成的数值
+    //根据编号改变能力,参数为要改变成的数值(用于战斗)
     public void changeAbility(int i, int value) {
         switch (i) {
             case 1:
@@ -185,7 +185,7 @@ public class Character implements Serializable, Cloneable {
         }
     }
     
-    //改变全部能力,参数为改变量
+    //改变全部能力,参数为改变量(用于升级)
     public void changeAbility(int hp_change, int mp_change, int str_change, int def_change, int intl_change, int agi_change){
         hp += hp_change;
         maxHp += hp_change;

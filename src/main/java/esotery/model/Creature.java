@@ -39,22 +39,22 @@ public class Creature extends Character {
     //怪物随机选择技能
     public void autoChooseSkill() {
         if (skill.size() == 1) { //只有一个技能
-            combatInfo.setUsedSkillID(1);
+            combatInfo.usedSkillID = 1;
         } else if (skill.size() == 2) { //有两个技能
             int r = (int) (Math.random() * 10);
             if (r < 5) {
                 combatInfo.usedSkillID = skill.get(0);
             }else{
-                getCombatInfo().setUsedSkillID(skill.get(1));
+                combatInfo.usedSkillID = skill.get(1);
             }
         } else { //有三个技能
             int r = (int) (Math.random() * 10);
             if (r < 5) {
-                getCombatInfo().setUsedSkillID(skill.get(0));
+                combatInfo.usedSkillID = skill.get(0);
             } else if (r >= 5 && r < 8) {
-                getCombatInfo().setUsedSkillID(skill.get(1));
+                combatInfo.usedSkillID = skill.get(1);
             } else {
-                getCombatInfo().setUsedSkillID(skill.get(2));
+                combatInfo.usedSkillID = skill.get(2);
             }
         }
     }
