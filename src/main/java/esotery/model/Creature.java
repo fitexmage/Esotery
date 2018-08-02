@@ -22,7 +22,7 @@ public class Creature extends Character {
     private HashMap<Integer, Integer> item; //物品列表
 
     public Creature(int creatureID, Character theCharacter, int dialogEventID, int combatEventID, int level, int exp, ArrayList<Integer> skill, HashMap<Integer, Integer> item) {
-        super(theCharacter.getName(), theCharacter.getRace(), theCharacter.getHp(), theCharacter.getMaxHp(), theCharacter.getMp(), theCharacter.getMaxMp(), theCharacter.getStr(), theCharacter.getDef(), theCharacter.getIntl(), theCharacter.getAgi());
+        super(theCharacter.name, theCharacter.race, theCharacter.hp, theCharacter.maxHp, theCharacter.mp, theCharacter.maxMp, theCharacter.str, theCharacter.def, theCharacter.intl, theCharacter.agi);
         this.creatureID = creatureID;
         this.dialogEventID = dialogEventID;
         this.combatEventID = combatEventID;
@@ -39,11 +39,11 @@ public class Creature extends Character {
     //怪物随机选择技能
     public void autoChooseSkill() {
         if (skill.size() == 1) { //只有一个技能
-            getCombatInfo().setUsedSkillID(1);
+            combatInfo.setUsedSkillID(1);
         } else if (skill.size() == 2) { //有两个技能
             int r = (int) (Math.random() * 10);
             if (r < 5) {
-                getCombatInfo().setUsedSkillID(skill.get(0));
+                combatInfo.usedSkillID = skill.get(0);
             }else{
                 getCombatInfo().setUsedSkillID(skill.get(1));
             }

@@ -13,18 +13,18 @@ import java.io.*;
  */
 public class Character implements Serializable, Cloneable {
 
-    private String name; //游戏名
-    private int race; //种族 1: 人类 2: 野兽
-    private int hp; //生命
-    private int maxHp; //最大生命
-    private int mp; //魔法
-    private int maxMp; //最大魔法
-    private int str; //力量
-    private int def; //防御
-    private int intl; //智力
-    private int agi; //敏捷
+    String name; //游戏名
+    int race; //种族 1: 人类 2: 野兽
+    int hp; //生命
+    int maxHp; //最大生命
+    int mp; //魔法
+    int maxMp; //最大魔法
+    int str; //力量
+    int def; //防御
+    int intl; //智力
+    int agi; //敏捷
 
-    private CombatInfo combatInfo; //战斗信息
+    CombatInfo combatInfo; //战斗信息
 
     public Character(String name, int race, int hp, int maxHp, int mp, int maxMp, int str, int def, int intl, int agi) {
         this.name = name;
@@ -67,7 +67,7 @@ public class Character implements Serializable, Cloneable {
     //攻击
     public String fight(Character target) {
         String record = ""; //战斗信息
-        Skill usedSkill = SkillList.getTheSkill(combatInfo.getUsedSkillID()); //使用的技能
+        Skill usedSkill = SkillList.getTheSkill(combatInfo.usedSkillID); //使用的技能
         for (SkillEffect theSkillEffect : usedSkill.getSkillEffectList()) {
             //该效果的目标
             Character tempTarget;
@@ -92,8 +92,7 @@ public class Character implements Serializable, Cloneable {
                 } else {
                     record += "为" + tempTarget.name + "恢复了" + realValue + "点血量!\n";
                 }
-            } 
-            else { //降低能力技能
+            } else { //降低能力技能
                 originalValue = (int) (ability(theSkillEffect.getAttributeBased()) * theSkillEffect.getValue());
                 int targetValue = tempTarget.ability(theSkillEffect.getAttributeTarget());
                 if (originalValue >= targetValue) {
@@ -114,91 +113,88 @@ public class Character implements Serializable, Cloneable {
 
     //根据编号返回能力数值
     public int ability(int i) {
-        if (i == 1) {
-            return hp;
-        } else if (i == 2) {
-            return mp;
-        } else if (i == 3) {
-            return str;
-        } else if (i == 4) {
-            return def;
-        } else if (i == 5) {
-            return intl;
-        } else if (i == 6) {
-            return agi;
+        switch (i) {
+            case 1:
+                return hp;
+            case 2:
+                return mp;
+            case 3:
+                return str;
+            case 4:
+                return def;
+            case 5:
+                return intl;
+            case 6:
+                return agi;
+            default:
+                return 0;
         }
-        return 0;
     }
 
     //根据编号返回文字
     public String abilityName(int i) {
-        if (i == 1) {
-            return "生命值";
-        } else if (i == 2) {
-            return "魔法值";
-        } else if (i == 3) {
-            return "力量";
-        } else if (i == 4) {
-            return "防御";
-        } else if (i == 5) {
-            return "智力";
-        } else if (i == 6) {
-            return "敏捷";
-        }
-        return "";
-    }
-
-    //根据编号改变能力数值
-    public void changeAbility(int i, int value) {
-        if (i == 1) {
-            hp = value;
-        } else if (i == 2) {
-            mp = value;
-        } else if (i == 3) {
-            str = value;
-        } else if (i == 4) {
-            def = value;
-        } else if (i == 5) {
-            intl = value;
-        } else if (i == 6) {
-            agi = value;
-        }
-    }
-
-    //升级后能力提升
-    public void levelUp(int role) {
-        switch (role) {
+        switch (i) {
             case 1:
-                hp += 5;
-                maxHp += 5;
-                mp += 1;
-                maxMp += 1;
-                str += 2;
-                def += 3;
-                intl += 1;
-                agi += 1;
+                return "生命值";
+            case 2:
+                return "魔法值";
+            case 3:
+                return "力量";
+            case 4:
+                return "防御";
+            case 5:
+                return "智力";
+            case 6:
+                return "敏捷";
+            default:
+                return "";
+        }
+    }
+
+    //根据编号改变能力,参数为要改变成的数值
+    public void changeAbility(int i, int value) {
+        switch (i) {
+            case 1:
+                if (value <= maxHp) {
+                    hp = value;
+                } else {
+                    hp = maxHp;
+                }
                 break;
             case 2:
-                hp += 2;
-                maxHp += 2;
-                mp += 2;
-                maxMp += 2;
-                str += 5;
-                def += 1;
-                intl += 1;
-                agi += 3;
+                if (value <= maxMp) {
+                    mp = value;
+                } else {
+                    mp = maxMp;
+                }
                 break;
             case 3:
-                hp += 3;
-                maxHp += 3;
-                mp += 5;
-                maxMp += 5;
-                str += 1;
-                def += 1;
-                intl += 6;
-                agi += 1;
+                str = value;
+                break;
+            case 4:
+                def = value;
+                break;
+            case 5:
+                intl = value;
+                break;
+            case 6:
+                agi = value;
+                break;
+            default:
                 break;
         }
+    }
+    
+    //改变全部能力,参数为改变量
+    public void changeAbility(int hp_change, int mp_change, int str_change, int def_change, int intl_change, int agi_change){
+        hp += hp_change;
+        maxHp += hp_change;
+        mp += mp_change;
+        maxMp += mp_change;
+        str += str_change;
+        def += def_change;
+        intl += intl_change;
+        agi += agi_change;
     }
 
     @Override

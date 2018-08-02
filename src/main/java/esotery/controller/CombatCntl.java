@@ -195,7 +195,7 @@ public class CombatCntl {
                         + "获得了" + rawEnemy.getExp() + "点经验值!" + "\n"
                         + "你升到了" + rawPlayer.getLevel() + "级!" + "\n"); //结算信息
                 for (int i = 0; i < levelDifference; i++) {
-                    rawPlayer.levelUp(rawPlayer.getRole()); //升级后能力提升
+                    rawPlayer.levelUp(); //升级后能力提升
                 }
                 //满血满蓝
                 rawPlayer.setHp(rawPlayer.getMaxHp());

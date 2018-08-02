@@ -14,16 +14,16 @@ import javafx.scene.control.*;
  */
 public class Attribute extends Character implements Serializable {
 
-    private int playerID; //玩家ID
-    private int gender; //性别 1: 男, 2: 女
-    private int role; //职业 1: 战士 2: 刺客 3:法师
-    private int location; //当前位置
-    private int level; //等级,因为有get,所以必须要
-    private int exp; //经验值
-    private int neededExp; //下一级需要达到的经验值,因为有get,所以必须要
+    int playerID; //玩家ID
+    int gender; //性别 1: 男, 2: 女
+    int role; //职业 1: 战士 2: 刺客 3:法师
+    int location; //当前位置
+    //int level; //等级,因为有get,所以必须要
+    int exp; //经验值
+    //int neededExp; //下一级需要达到的经验值,因为有get,所以必须要
 
     public Attribute(int playerID, Character theCharacter, int gender, int role, int location, int exp) {
-        super(theCharacter.getName(), theCharacter.getRace(), theCharacter.getHp(), theCharacter.getMaxHp(), theCharacter.getMp(), theCharacter.getMaxMp(), theCharacter.getStr(), theCharacter.getDef(), theCharacter.getIntl(), theCharacter.getAgi());
+        super(theCharacter.name, theCharacter.race, theCharacter.hp, theCharacter.maxHp, theCharacter.mp, theCharacter.maxMp, theCharacter.str, theCharacter.def, theCharacter.intl, theCharacter.agi);
         this.playerID = playerID;
         this.gender = gender;
         this.role = role;
@@ -37,20 +37,20 @@ public class Attribute extends Character implements Serializable {
 
     //更新属性
     public void update(Attribute newAttribute) {
-        super.setName(newAttribute.getName());
-        super.setRace(newAttribute.getRace());
-        super.setHp(newAttribute.getHp());
-        super.setMaxHp(newAttribute.getMaxHp());
-        super.setMp(newAttribute.getMp());
-        super.setMaxMp(newAttribute.getMaxMp());
-        super.setStr(newAttribute.getStr());
-        super.setDef(newAttribute.getDef());
-        super.setIntl(newAttribute.getIntl());
-        super.setAgi(newAttribute.getAgi());
-        this.gender = newAttribute.getGender();
-        this.role = newAttribute.getRole();
-        this.location = newAttribute.getLocation();
-        this.exp = newAttribute.getExp();
+        super.name = newAttribute.name;
+        super.race = newAttribute.race;
+        super.hp = newAttribute.hp;
+        super.maxHp = newAttribute.maxHp;
+        super.mp = newAttribute.mp;
+        super.maxMp = newAttribute.maxMp;
+        super.str = newAttribute.str;
+        super.def = newAttribute.def;
+        super.intl = newAttribute.intl;
+        super.agi = newAttribute.agi;
+        this.gender = newAttribute.gender;
+        this.role = newAttribute.role;
+        this.location = newAttribute.location;
+        this.exp = newAttribute.exp;
     }
 
     //新的属性
@@ -105,88 +105,19 @@ public class Attribute extends Character implements Serializable {
     public int getLevelDifference(int proExp) {
         return (int) Math.pow(proExp, 1.0 / 2) - getLevel();
     }
-
-    /**
-     * @return the playerID
-     */
-    public int getPlayerID() {
-        return playerID;
-    }
-
-    /**
-     * @param playerID the playerID to set
-     */
-    public void setPlayerID(int playerID) {
-        this.playerID = playerID;
-    }
-
-    /**
-     * @return the gender
-     */
-    public int getGender() {
-        return gender;
-    }
-
-    /**
-     * @param gender the gender to set
-     */
-    public void setGender(int gender) {
-        this.gender = gender;
-    }
-
-    /**
-     * @return the role
-     */
-    public int getRole() {
-        return role;
-    }
-
-    /**
-     * @param role the role to set
-     */
-    public void setRole(int role) {
-        this.role = role;
-    }
-
-    /**
-     * @return the location
-     */
-    public int getLocation() {
-        return location;
-    }
-
-    /**
-     * @param location the location to set
-     */
-    public void setLocation(int location) {
-        this.location = location;
-    }
-
-    /**
-     * @param level the level to set
-     */
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    /**
-     * @return the exp
-     */
-    public int getExp() {
-        return exp;
-    }
-
-    /**
-     * @param exp the exp to set
-     */
-    public void setExp(int exp) {
-        this.exp = exp;
-    }
-
-    /**
-     * @param neededExp the neededExp to set
-     */
-    public void setNeededExp(int neededExp) {
-        this.neededExp = neededExp;
+    
+    //升级后能力提升
+    public void levelUp() {
+        switch (role) {
+            case 1:
+                changeAbility(5, 1, 2, 3, 1, 1);
+                break;
+            case 2:
+                changeAbility(2, 2, 5, 1, 1, 3);
+                break;
+            case 3:
+                changeAbility(3, 5, 1, 1, 6, 1);
+                break;
+        }
     }
 }
