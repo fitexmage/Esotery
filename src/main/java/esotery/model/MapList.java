@@ -14,30 +14,21 @@ import java.util.*;
  *
  * @author fitexmage
  */
-public class MapList extends dataList{
+public class MapList{
 
     private ArrayList<Map> mapList;
-    private String mapFileName = "database/map.json";
+    final String mapFileName = "database/map.json";
 
     public MapList() {
         readFile();
     }
 
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             mapList = mapper.readValue(new File(mapFileName), new TypeReference<ArrayList<Map>>(){});
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-    
-    public void writeFile(){
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            mapper.writeValue(new File("map.json"), mapList);
-        } catch (IOException ex) {
-            ex.printStackTrace();
         }
     }
 
@@ -62,19 +53,5 @@ public class MapList extends dataList{
      */
     public void setMapList(ArrayList<Map> mapList) {
         this.mapList = mapList;
-    }
-
-    /**
-     * @return the mapFileName
-     */
-    public String getMapFileName() {
-        return mapFileName;
-    }
-
-    /**
-     * @param mapFileName the mapFileName to set
-     */
-    public void setMapFileName(String mapFileName) {
-        this.mapFileName = mapFileName;
     }
 }

@@ -35,24 +35,10 @@ public class SkillEffect{
     }
 
     /**
-     * @param target the target to set
-     */
-    public void setTarget(int target) {
-        this.target = target;
-    }
-
-    /**
      * @return the attributeBased
      */
     public int getAttributeBased() {
         return attributeBased;
-    }
-
-    /**
-     * @param attributeBased the attributeBased to set
-     */
-    public void setAttributeBased(int attributeBased) {
-        this.attributeBased = attributeBased;
     }
 
     /**
@@ -63,23 +49,9 @@ public class SkillEffect{
     }
 
     /**
-     * @param attributeTarget the attributeTarget to set
-     */
-    public void setAttributeTarget(int attributeTarget) {
-        this.attributeTarget = attributeTarget;
-    }
-
-    /**
      * @return the value
      */
     public double getValue() {
         return value;
-    }
-
-    /**
-     * @param value the value to set
-     */
-    public void setValue(double value) {
-        this.value = value;
     }
 }

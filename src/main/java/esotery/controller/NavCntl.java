@@ -56,20 +56,6 @@ public class NavCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theNavCntl
      */
     public static NavCntl getTheNavCntl() {
@@ -79,12 +65,5 @@ public class NavCntl {
     public static NavCntl getTheNavCntl(Stage theStage) {
         theNavCntl = new NavCntl(theStage);
         return theNavCntl;
-    }
-
-    /**
-     * @param aTheNavCntl the theNavCntl to set
-     */
-    public static void setTheNavCntl(NavCntl aTheNavCntl) {
-        theNavCntl = aTheNavCntl;
     }
 }

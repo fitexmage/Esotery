@@ -14,10 +14,10 @@ import java.util.*;
  *
  * @author fitexmage
  */
-public class AccountList extends dataList {
+public class AccountList{
 
     private ArrayList<Account> accountList; 
-    private String accountFileName = "database/account.json";
+    final String accountFileName = "database/account.json";
 
     public AccountList() {
         readFile();
@@ -28,7 +28,7 @@ public class AccountList extends dataList {
     }
 
     //读取
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             accountList = mapper.readValue(new File(accountFileName), new TypeReference<ArrayList<Account>>() {
@@ -79,7 +79,7 @@ public class AccountList extends dataList {
 
     //通过用户名得到ID,用于验证
     public int getID(String username) {
-        for (Account theAccount : Data.getTheData().getTheAccountListClass().getAccountList()) {
+        for (Account theAccount : Data.getTheData().getTheAccountListClass().accountList) {
             if (theAccount.getUsername().equals(username)) {
                 return theAccount.getPlayerID();
             }
@@ -89,39 +89,11 @@ public class AccountList extends dataList {
     
     //通过用户名和密码得到ID,用于验证
     public int getID(String username, String password) {
-        for (Account theAccount : Data.getTheData().getTheAccountListClass().getAccountList()) {
+        for (Account theAccount : Data.getTheData().getTheAccountListClass().accountList) {
             if (theAccount.getUsername().equals(username) && theAccount.getPassword().equals(password)) {
                 return theAccount.getPlayerID();
             }
         }
         return -1;
-    }
-
-    /**
-     * @return the accountList
-     */
-    public ArrayList<Account> getAccountList() {
-        return accountList;
-    }
-
-    /**
-     * @param accountList the accountList to set
-     */
-    public void setAccountList(ArrayList<Account> accountList) {
-        this.accountList = accountList;
-    }
-
-    /**
-     * @return the accountFileName
-     */
-    public String getAccountFileName() {
-        return accountFileName;
-    }
-
-    /**
-     * @param accountFileName the accountFileName to set
-     */
-    public void setAccountFileName(String accountFileName) {
-        this.accountFileName = accountFileName;
     }
 }

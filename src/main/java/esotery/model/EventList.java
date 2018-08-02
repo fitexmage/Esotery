@@ -14,17 +14,17 @@ import java.util.*;
  *
  * @author fitexmage
  */
-public class EventList extends dataList{
+public class EventList{
 
     private ArrayList<Event> eventList;
-    private String eventFileName = "database/event.json";
+    final String eventFileName = "database/event.json";
 
     public EventList() {
         readFile();
     }
 
     //读取
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             eventList = mapper.readValue(new File(eventFileName), new TypeReference<ArrayList<Event>>(){});
@@ -33,11 +33,6 @@ public class EventList extends dataList{
         }
     }
     
-    //写入
-    public void writeFile(){
-        
-    }
-
     //查找指定事件
     public Event getTheEvent(int theEventID) {
         for (Event theEvent : eventList) {
@@ -60,33 +55,5 @@ public class EventList extends dataList{
             System.out.println();
             System.out.println();
         }
-    }
-
-    /**
-     * @return the eventList
-     */
-    public ArrayList<Event> getEventList() {
-        return eventList;
-    }
-
-    /**
-     * @param eventList the eventList to set
-     */
-    public void setEventList(ArrayList<Event> eventList) {
-        this.eventList = eventList;
-    }
-
-    /**
-     * @return the eventFileName
-     */
-    public String getEventFileName() {
-        return eventFileName;
-    }
-
-    /**
-     * @param eventFileName the eventFileName to set
-     */
-    public void setEventFileName(String eventFileName) {
-        this.eventFileName = eventFileName;
     }
 }

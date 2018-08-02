@@ -14,14 +14,14 @@ public class Data {
     //初始化所有数据
     private static Data theData;
     
-    private AccountList theAccountListClass;
-    private AttributeList theAttributeListClass;
-    private SkillList theSkillListClass;
-    private ConditionList theConditionListClass;
-    private MapList theMapListClass;
-    private EventList theEventListClass;
-    private DialogList theDialogListClass;
-    private CreatureList theCreatureListClass;
+    AccountList theAccountListClass;
+    AttributeList theAttributeListClass;
+    SkillList theSkillListClass;
+    ConditionList theConditionListClass;
+    MapList theMapListClass;
+    EventList theEventListClass;
+    DialogList theDialogListClass;
+    CreatureList theCreatureListClass;
 
     public Data() {
         showProcess(10);
@@ -70,24 +70,10 @@ public class Data {
     }
 
     /**
-     * @param theAccountListClass the theAccountListClass to set
-     */
-    public void setTheAccountListClass(AccountList theAccountListClass) {
-        this.theAccountListClass = theAccountListClass;
-    }
-
-    /**
      * @return the theAttributeListClass
      */
     public AttributeList getTheAttributeListClass() {
         return theAttributeListClass;
-    }
-
-    /**
-     * @param theAttributeListClass the theAttributeListClass to set
-     */
-    public void setTheAttributeListClass(AttributeList theAttributeListClass) {
-        this.theAttributeListClass = theAttributeListClass;
     }
 
     /**
@@ -98,24 +84,10 @@ public class Data {
     }
 
     /**
-     * @param theSkillListClass the theSkillListClass to set
-     */
-    public void setTheSkillListClass(SkillList theSkillListClass) {
-        this.theSkillListClass = theSkillListClass;
-    }
-
-    /**
      * @return the theConditionListClass
      */
     public ConditionList getTheConditionListClass() {
         return theConditionListClass;
-    }
-
-    /**
-     * @param theConditionListClass the theConditionListClass to set
-     */
-    public void setTheConditionListClass(ConditionList theConditionListClass) {
-        this.theConditionListClass = theConditionListClass;
     }
 
     /**
@@ -126,24 +98,10 @@ public class Data {
     }
 
     /**
-     * @param theMapListClass the theMapListClass to set
-     */
-    public void setTheMapListClass(MapList theMapListClass) {
-        this.theMapListClass = theMapListClass;
-    }
-
-    /**
      * @return the theEventListClass
      */
     public EventList getTheEventListClass() {
         return theEventListClass;
-    }
-
-    /**
-     * @param theEventListClass the theEventListClass to set
-     */
-    public void setTheEventListClass(EventList theEventListClass) {
-        this.theEventListClass = theEventListClass;
     }
 
     /**
@@ -154,23 +112,9 @@ public class Data {
     }
 
     /**
-     * @param theDialogListClass the theDialogListClass to set
-     */
-    public void setTheDialogListClass(DialogList theDialogListClass) {
-        this.theDialogListClass = theDialogListClass;
-    }
-
-    /**
      * @return the theCreatureListClass
      */
     public CreatureList getTheCreatureListClass() {
         return theCreatureListClass;
-    }
-
-    /**
-     * @param theCreatureListClass the theCreatureListClass to set
-     */
-    public void setTheCreatureListClass(CreatureList theCreatureListClass) {
-        this.theCreatureListClass = theCreatureListClass;
     }
 }

@@ -14,11 +14,11 @@ import java.util.*;
  *
  * @author fitexmage
  */
-public class ConditionList extends dataList {
+public class ConditionList{
 
     private HashMap<Integer, ArrayList<Condition>> conditionPackageList;
-    private String conditionFileName = "database/condition.json";
-    private static String originalConditionFileName = "database/originalCondition.json";
+    final String conditionFileName = "database/condition.json";
+    final static String originalConditionFileName = "database/originalCondition.json";
 
     public ConditionList() {
         readFile();
@@ -29,7 +29,7 @@ public class ConditionList extends dataList {
     }
 
     //读取
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             conditionPackageList = mapper.readValue(new File(conditionFileName), new TypeReference<HashMap<Integer, ArrayList<Condition>>>() {
@@ -87,47 +87,5 @@ public class ConditionList extends dataList {
     //更新指定状态包
     public void updateTheConditionPackage(int thePlayerID, ArrayList<Condition> newConditionPackage){
         conditionPackageList.put(thePlayerID, newConditionPackage);
-    }
-
-    /**
-     * @return the conditionPackageList
-     */
-    public HashMap<Integer, ArrayList<Condition>> getConditionPackageList() {
-        return conditionPackageList;
-    }
-
-    /**
-     * @param conditionPackageList the conditionPackageList to set
-     */
-    public void setConditionPackageList(HashMap<Integer, ArrayList<Condition>> conditionPackageList) {
-        this.conditionPackageList = conditionPackageList;
-    }
-
-    /**
-     * @return the conditionFileName
-     */
-    public String getConditionFileName() {
-        return conditionFileName;
-    }
-
-    /**
-     * @param conditionFileName the conditionFileName to set
-     */
-    public void setConditionFileName(String conditionFileName) {
-        this.conditionFileName = conditionFileName;
-    }
-
-    /**
-     * @return the originalConditionFileName
-     */
-    public static String getOriginalConditionFileName() {
-        return originalConditionFileName;
-    }
-
-    /**
-     * @param aOriginalConditionFileName the originalConditionFileName to set
-     */
-    public static void setOriginalConditionFileName(String aOriginalConditionFileName) {
-        originalConditionFileName = aOriginalConditionFileName;
     }
 }

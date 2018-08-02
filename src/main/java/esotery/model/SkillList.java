@@ -15,11 +15,11 @@ import java.util.Map.*;
  *
  * @author fitexmage
  */
-public class SkillList extends dataList{
+public class SkillList{
 
     private HashMap<Integer, ArrayList<Skill>> skillPackageList;
-    private String skillFileName = "database/skill.json";
-    private static String originalSkillFileName = "database/originalSkill.json";
+    final String skillFileName = "database/skill.json";
+    final static String originalSkillFileName = "database/originalSkill.json";
 
     public SkillList() {
         readFile();
@@ -29,11 +29,11 @@ public class SkillList extends dataList{
     }
 
     //读取
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            skillPackageList = mapper.readValue(new File(skillFileName), new TypeReference<HashMap<Integer, ArrayList<Skill>>>() {
-            });
+            setSkillPackageList(mapper.readValue(new File(skillFileName), new TypeReference<HashMap<Integer, ArrayList<Skill>>>() {
+            }));
         } catch (IOException ex) {
             //ex.printStackTrace();
         }
@@ -43,7 +43,7 @@ public class SkillList extends dataList{
     public void writeFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            mapper.writeValue(new File(skillFileName), skillPackageList);
+            mapper.writeValue(new File(skillFileName), getSkillPackageList());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -51,7 +51,7 @@ public class SkillList extends dataList{
 
     //查找指定技能包
     public ArrayList<Skill> getTheSkillPackage(int thePlayerID) {
-        for (Entry<Integer, ArrayList<Skill>> theSkillPackage : skillPackageList.entrySet()) {
+        for (Entry<Integer, ArrayList<Skill>> theSkillPackage : getSkillPackageList().entrySet()) {
             if (theSkillPackage.getKey() == thePlayerID) {
                 return theSkillPackage.getValue();
             }
@@ -91,6 +91,20 @@ public class SkillList extends dataList{
     
     //更新技能包
     public void updateTheSkillPackage(int thePlayerID, ArrayList<Skill> newSkillPackage){
-        skillPackageList.put(thePlayerID, newSkillPackage);
+        getSkillPackageList().put(thePlayerID, newSkillPackage);
+    }
+
+    /**
+     * @return the skillPackageList
+     */
+    public HashMap<Integer, ArrayList<Skill>> getSkillPackageList() {
+        return skillPackageList;
+    }
+
+    /**
+     * @param skillPackageList the skillPackageList to set
+     */
+    public void setSkillPackageList(HashMap<Integer, ArrayList<Skill>> skillPackageList) {
+        this.skillPackageList = skillPackageList;
     }
 }

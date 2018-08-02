@@ -70,20 +70,6 @@ public class EventCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theEventCntl
      */
     public static EventCntl getTheEventCntl(Stage theStage) {
@@ -91,33 +77,5 @@ public class EventCntl {
             theEventCntl = new EventCntl(theStage);
         }
         return theEventCntl;
-    }
-
-    /**
-     * @return the eventID
-     */
-    public int getEventID() {
-        return eventID;
-    }
-
-    /**
-     * @param eventID the eventID to set
-     */
-    public void setEventID(int eventID) {
-        this.eventID = eventID;
-    }
-
-    /**
-     * @return the step
-     */
-    public int getStep() {
-        return step;
-    }
-
-    /**
-     * @param step the step to set
-     */
-    public void setStep(int step) {
-        this.step = step;
     }
 }

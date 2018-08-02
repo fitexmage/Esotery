@@ -91,25 +91,4 @@ public class LoginCntl {
         theLoginCntl = new LoginCntl(theStage);
         return theLoginCntl;
     }
-
-    /**
-     * @param aTheLoginCntl the theLoginCntl to set
-     */
-    public static void setTheLoginCntl(LoginCntl aTheLoginCntl) {
-        theLoginCntl = aTheLoginCntl;
-    }
-
-    /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
 }

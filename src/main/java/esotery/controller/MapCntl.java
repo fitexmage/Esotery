@@ -288,7 +288,7 @@ public class MapCntl {
         return theCreature;
     }
 
-    //获取鼠标指向的生物
+    //获取鼠标指向的生物的名字
     public Creature getCreatureFromText(MouseEvent event) {
         Text theText = (Text) event.getSource();
         int creatureID = 0;
@@ -318,7 +318,7 @@ public class MapCntl {
         return theCreature;
     }
 
-    //获取鼠标指向的生物
+    //获取鼠标指向的生物的按钮
     public Creature getCreatureFromButton(MouseEvent event) {
         Button theButton = (Button) event.getSource();
         int creatureID = 0;
@@ -349,20 +349,6 @@ public class MapCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theMapCntl
      */
     public static MapCntl getTheMapCntl() {
@@ -372,26 +358,5 @@ public class MapCntl {
     public static MapCntl getTheMapCntl(Stage theStage) {
         theMapCntl = new MapCntl(theStage);
         return theMapCntl;
-    }
-
-    /**
-     * @param aTheMapCntl the theMapCntl to set
-     */
-    public static void setTheMapCntl(MapCntl aTheMapCntl) {
-        theMapCntl = aTheMapCntl;
-    }
-
-    /**
-     * @return the theMap
-     */
-    public Map getTheMap() {
-        return theMap;
-    }
-
-    /**
-     * @param theMap the theMap to set
-     */
-    public void setTheMap(Map theMap) {
-        this.theMap = theMap;
     }
 }

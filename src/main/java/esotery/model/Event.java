@@ -35,13 +35,6 @@ public class Event {
     }
 
     /**
-     * @param eventID the eventID to set
-     */
-    public void setEventID(int eventID) {
-        this.eventID = eventID;
-    }
-
-    /**
      * @return the description
      */
     public String getDescription() {
@@ -49,23 +42,9 @@ public class Event {
     }
 
     /**
-     * @param description the description to set
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
      * @return the eventActionList
      */
     public ArrayList<EventAction> getEventActionList() {
         return eventActionList;
-    }
-
-    /**
-     * @param eventActionList the eventActionList to set
-     */
-    public void setEventActionList(ArrayList<EventAction> eventActionList) {
-        this.eventActionList = eventActionList;
     }
 }

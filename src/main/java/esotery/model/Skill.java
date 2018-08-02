@@ -39,24 +39,10 @@ public class Skill {
     }
 
     /**
-     * @param skillID the skillID to set
-     */
-    public void setSkillID(int skillID) {
-        this.skillID = skillID;
-    }
-
-    /**
      * @return the name
      */
     public String getName() {
         return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
     }
 
     /**
@@ -67,13 +53,6 @@ public class Skill {
     }
 
     /**
-     * @param description the description to set
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
      * @return the cost
      */
     public int getCost() {
@@ -81,23 +60,9 @@ public class Skill {
     }
 
     /**
-     * @param cost the cost to set
-     */
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
-
-    /**
      * @return the skillEffectList
      */
     public ArrayList<SkillEffect> getSkillEffectList() {
         return skillEffectList;
-    }
-
-    /**
-     * @param skillEffectList the skillEffectList to set
-     */
-    public void setSkillEffectList(ArrayList<SkillEffect> skillEffectList) {
-        this.skillEffectList = skillEffectList;
     }
 }

@@ -27,8 +27,8 @@ public class Account {
     
     // 更新账号
     public void update(Account newAccount){
-        this.username = newAccount.username;
-        this.password = newAccount.password;
+        username = newAccount.username;
+        password = newAccount.password;
     }
 
     /**
@@ -39,13 +39,6 @@ public class Account {
     }
 
     /**
-     * @param playerID the playerID to set
-     */
-    public void setPlayerID(int playerID) {
-        this.playerID = playerID;
-    }
-
-    /**
      * @return the username
      */
     public String getUsername() {
@@ -53,23 +46,9 @@ public class Account {
     }
 
     /**
-     * @param username the username to set
-     */
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    /**
      * @return the password
      */
     public String getPassword() {
         return password;
-    }
-
-    /**
-     * @param password the password to set
-     */
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

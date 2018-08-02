@@ -67,24 +67,10 @@ public class Creature extends Character {
     }
 
     /**
-     * @param creatureID the creatureID to set
-     */
-    public void setCreatureID(int creatureID) {
-        this.creatureID = creatureID;
-    }
-
-    /**
      * @return the dialogEventID
      */
     public int getDialogEventID() {
         return dialogEventID;
-    }
-
-    /**
-     * @param dialogEventID the dialogEventID to set
-     */
-    public void setDialogEventID(int dialogEventID) {
-        this.dialogEventID = dialogEventID;
     }
 
     /**
@@ -95,24 +81,10 @@ public class Creature extends Character {
     }
 
     /**
-     * @param combatEventID the combatEventID to set
-     */
-    public void setCombatEventID(int combatEventID) {
-        this.combatEventID = combatEventID;
-    }
-
-    /**
      * @return the level
      */
     public int getLevel() {
         return level;
-    }
-
-    /**
-     * @param level the level to set
-     */
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     /**
@@ -123,13 +95,6 @@ public class Creature extends Character {
     }
 
     /**
-     * @param exp the exp to set
-     */
-    public void setExp(int exp) {
-        this.exp = exp;
-    }
-
-    /**
      * @return the skill
      */
     public ArrayList<Integer> getSkill() {
@@ -137,23 +102,9 @@ public class Creature extends Character {
     }
 
     /**
-     * @param skill the skill to set
-     */
-    public void setSkill(ArrayList<Integer> skill) {
-        this.skill = skill;
-    }
-
-    /**
      * @return the item
      */
     public HashMap<Integer, Integer> getItem() {
         return item;
-    }
-
-    /**
-     * @param item the item to set
-     */
-    public void setItem(HashMap<Integer, Integer> item) {
-        this.item = item;
     }
 }

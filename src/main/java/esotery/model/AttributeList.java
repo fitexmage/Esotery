@@ -15,10 +15,10 @@ import javafx.scene.control.*;
  *
  * @author fitexmage
  */
-public class AttributeList extends dataList {
+public class AttributeList{
 
     private ArrayList<Attribute> attributeList;
-    private String attributeFileName = "database/attribute.json";
+    final String attributeFileName = "database/attribute.json";
 
     public AttributeList() {
         readFile();
@@ -30,7 +30,7 @@ public class AttributeList extends dataList {
     }
 
     //读取
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             attributeList = mapper.readValue(new File(attributeFileName), new TypeReference<ArrayList<Attribute>>() {
@@ -72,33 +72,5 @@ public class AttributeList extends dataList {
     //添加新的属性
     public void addNewAttribute(int playerID, TextField name, CheckBox male, CheckBox female, CheckBox warrior, CheckBox assassin, CheckBox mage) {
         attributeList.add(Attribute.newAttribute(playerID, name, male, female, warrior, assassin, mage));
-    }
-
-    /**
-     * @return the attributeList
-     */
-    public ArrayList<Attribute> getAttributeList() {
-        return attributeList;
-    }
-
-    /**
-     * @param attributeList the attributeList to set
-     */
-    public void setAttributeList(ArrayList<Attribute> attributeList) {
-        this.attributeList = attributeList;
-    }
-
-    /**
-     * @return the attributeFileName
-     */
-    public String getAttributeFileName() {
-        return attributeFileName;
-    }
-
-    /**
-     * @param attributeFileName the attributeFileName to set
-     */
-    public void setAttributeFileName(String attributeFileName) {
-        this.attributeFileName = attributeFileName;
     }
 }

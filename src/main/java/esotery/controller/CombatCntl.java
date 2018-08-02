@@ -213,20 +213,6 @@ public class CombatCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theCombatCntl
      */
     public static CombatCntl getTheCombatCntl() {
@@ -236,96 +222,5 @@ public class CombatCntl {
     public static CombatCntl getTheCombatCntl(Stage theStage) {
         theCombatCntl = new CombatCntl(theStage);
         return theCombatCntl;
-    }
-
-    /**
-     * @param aTheCombatCntl the theCombatCntl to set
-     */
-    public static void setTheCombatCntl(CombatCntl aTheCombatCntl) {
-        theCombatCntl = aTheCombatCntl;
-    }
-
-    /**
-     * @return the rawPlayer
-     */
-    public Attribute getRawPlayer() {
-        return rawPlayer;
-    }
-
-    /**
-     * @param rawPlayer the rawPlayer to set
-     */
-    public void setRawPlayer(Attribute rawPlayer) {
-        this.rawPlayer = rawPlayer;
-    }
-
-    /**
-     * @return the combatPlayer
-     */
-    public Attribute getCombatPlayer() {
-        return combatPlayer;
-    }
-
-    /**
-     * @param combatPlayer the combatPlayer to set
-     */
-    public void setCombatPlayer(Attribute combatPlayer) {
-        this.combatPlayer = combatPlayer;
-    }
-
-    /**
-     * @return the rawEnemy
-     */
-    public Creature getRawEnemy() {
-        return rawEnemy;
-    }
-
-    /**
-     * @param rawEnemy the rawEnemy to set
-     */
-    public void setRawEnemy(Creature rawEnemy) {
-        this.rawEnemy = rawEnemy;
-    }
-
-    /**
-     * @return the combatEnemy
-     */
-    public Creature getCombatEnemy() {
-        return combatEnemy;
-    }
-
-    /**
-     * @param combatEnemy the combatEnemy to set
-     */
-    public void setCombatEnemy(Creature combatEnemy) {
-        this.combatEnemy = combatEnemy;
-    }
-
-    /**
-     * @return the turn
-     */
-    public int getTurn() {
-        return turn;
-    }
-
-    /**
-     * @param turn the turn to set
-     */
-    public void setTurn(int turn) {
-        this.turn = turn;
-    }
-
-    /**
-     * @return the record
-     */
-    public String getRecord() {
-        return record;
-    }
-
-    /**
-     * @param record the record to set
-     */
-    public void setRecord(String record) {
-        this.record = record;
     }
 }

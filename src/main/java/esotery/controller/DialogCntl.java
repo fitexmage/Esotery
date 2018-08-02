@@ -71,20 +71,6 @@ public class DialogCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theDialogCntl
      */
     public static DialogCntl getTheDialogCntl() {
@@ -94,27 +80,6 @@ public class DialogCntl {
     public static DialogCntl getTheDialogCntl(Stage theStage) {
         theDialogCntl = new DialogCntl(theStage);
         return theDialogCntl;
-    }
-
-    /**
-     * @param aTheDialogCntl the theDialogCntl to set
-     */
-    public static void setTheDialogCntl(DialogCntl aTheDialogCntl) {
-        theDialogCntl = aTheDialogCntl;
-    }
-
-    /**
-     * @return the dialogID
-     */
-    public int getDialogID() {
-        return dialogID;
-    }
-
-    /**
-     * @param dialogID the dialogID to set
-     */
-    public void setDialogID(int dialogID) {
-        this.dialogID = dialogID;
     }
 
     /**

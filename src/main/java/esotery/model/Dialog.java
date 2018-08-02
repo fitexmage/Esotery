@@ -37,24 +37,10 @@ public class Dialog {
     }
 
     /**
-     * @param dialogID the dialogID to set
-     */
-    public void setDialogID(int dialogID) {
-        this.dialogID = dialogID;
-    }
-
-    /**
      * @return the content
      */
     public String getContent() {
         return content;
-    }
-
-    /**
-     * @param content the content to set
-     */
-    public void setContent(String content) {
-        this.content = content;
     }
 
     /**
@@ -65,23 +51,9 @@ public class Dialog {
     }
 
     /**
-     * @param speaker the speaker to set
-     */
-    public void setSpeaker(String speaker) {
-        this.speaker = speaker;
-    }
-
-    /**
      * @return the choiceID
      */
     public ArrayList<Integer> getChoiceID() {
         return choiceID;
-    }
-
-    /**
-     * @param choiceID the choiceID to set
-     */
-    public void setChoiceID(ArrayList<Integer> choiceID) {
-        this.choiceID = choiceID;
     }
 }

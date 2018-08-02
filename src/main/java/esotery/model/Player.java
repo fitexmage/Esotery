@@ -50,24 +50,10 @@ public class Player {
     }
 
     /**
-     * @param theAccount the theAccount to set
-     */
-    public void setTheAccount(Account theAccount) {
-        this.theAccount = theAccount;
-    }
-
-    /**
      * @return the theAttribute
      */
     public Attribute getTheAttribute() {
         return theAttribute;
-    }
-
-    /**
-     * @param theAttribute the theAttribute to set
-     */
-    public void setTheAttribute(Attribute theAttribute) {
-        this.theAttribute = theAttribute;
     }
 
     /**
@@ -78,23 +64,9 @@ public class Player {
     }
 
     /**
-     * @param conditionPackage the conditionPackage to set
-     */
-    public void setConditionPackage(ArrayList<Condition> conditionPackage) {
-        this.conditionPackage = conditionPackage;
-    }
-
-    /**
      * @return the skillPackage
      */
     public ArrayList<Skill> getSkillPackage() {
         return skillPackage;
-    }
-
-    /**
-     * @param skillPackage the skillPackage to set
-     */
-    public void setSkillPackage(ArrayList<Skill> skillPackage) {
-        this.skillPackage = skillPackage;
     }
 }

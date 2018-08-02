@@ -47,24 +47,10 @@ public class Map {
     }
 
     /**
-     * @param mapID the mapID to set
-     */
-    public void setMapID(int mapID) {
-        this.mapID = mapID;
-    }
-
-    /**
      * @return the name
      */
     public String getName() {
         return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
     }
 
     /**
@@ -75,24 +61,10 @@ public class Map {
     }
 
     /**
-     * @param description the description to set
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
      * @return the forwardEventID
      */
     public int getForwardEventID() {
         return forwardEventID;
-    }
-
-    /**
-     * @param forwardEventID the forwardEventID to set
-     */
-    public void setForwardEventID(int forwardEventID) {
-        this.forwardEventID = forwardEventID;
     }
 
     /**
@@ -103,24 +75,10 @@ public class Map {
     }
 
     /**
-     * @param backEventID the backEventID to set
-     */
-    public void setBackEventID(int backEventID) {
-        this.backEventID = backEventID;
-    }
-
-    /**
      * @return the leftEventID
      */
     public int getLeftEventID() {
         return leftEventID;
-    }
-
-    /**
-     * @param leftEventID the leftEventID to set
-     */
-    public void setLeftEventID(int leftEventID) {
-        this.leftEventID = leftEventID;
     }
 
     /**
@@ -131,13 +89,6 @@ public class Map {
     }
 
     /**
-     * @param rightEventID the rightEventID to set
-     */
-    public void setRightEventID(int rightEventID) {
-        this.rightEventID = rightEventID;
-    }
-
-    /**
      * @return the npc
      */
     public ArrayList<Integer> getNpc() {
@@ -145,23 +96,9 @@ public class Map {
     }
 
     /**
-     * @param npc the npc to set
-     */
-    public void setNpc(ArrayList<Integer> npc) {
-        this.npc = npc;
-    }
-
-    /**
      * @return the monster
      */
     public ArrayList<Integer> getMonster() {
         return monster;
-    }
-
-    /**
-     * @param monster the monster to set
-     */
-    public void setMonster(ArrayList<Integer> monster) {
-        this.monster = monster;
     }
 }

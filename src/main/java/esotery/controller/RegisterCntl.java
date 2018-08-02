@@ -80,20 +80,6 @@ public class RegisterCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theRegisterCntl
      */
     public static RegisterCntl getTheRegisterCntl() {
@@ -103,12 +89,5 @@ public class RegisterCntl {
     public static RegisterCntl getTheRegisterCntl(Stage theStage) {
         theRegisterCntl = new RegisterCntl(theStage);
         return theRegisterCntl;
-    }
-
-    /**
-     * @param aTheRegisterCntl the theRegisterCntl to set
-     */
-    public static void setTheRegisterCntl(RegisterCntl aTheRegisterCntl) {
-        theRegisterCntl = aTheRegisterCntl;
     }
 }

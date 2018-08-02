@@ -31,23 +31,9 @@ public class EventAction {
     }
 
     /**
-     * @param type the type to set
-     */
-    public void setType(int type) {
-        this.type = type;
-    }
-
-    /**
      * @return the actionID
      */
     public int getActionID() {
         return actionID;
-    }
-
-    /**
-     * @param actionID the actionID to set
-     */
-    public void setActionID(int actionID) {
-        this.actionID = actionID;
     }
 }

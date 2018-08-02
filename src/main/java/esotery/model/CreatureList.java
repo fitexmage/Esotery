@@ -14,28 +14,23 @@ import java.util.*;
  *
  * @author fitexmage
  */
-public class CreatureList extends dataList{
+public class CreatureList{
 
     private ArrayList<Creature> theCreatureList;
-    private String creatureFileName = "database/creature.json";
+    final String creatureFileName = "database/creature.json";
 
     public CreatureList() {
         readFile();
     }
 
     //读取
-    public void readFile() {
+    private void readFile() {
         ObjectMapper mapper = new ObjectMapper();
         try {
             theCreatureList = mapper.readValue(new File(creatureFileName), new TypeReference<ArrayList<Creature>>(){});
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-    
-    //写入
-    public void writeFile(){
-
     }
 
     //查找指定怪物
@@ -46,33 +41,5 @@ public class CreatureList extends dataList{
             }
         }
         return null;
-    }
-
-    /**
-     * @return the theCreatureList
-     */
-    public ArrayList<Creature> getTheCreatureList() {
-        return theCreatureList;
-    }
-
-    /**
-     * @param theCreatureList the theCreatureList to set
-     */
-    public void setTheCreatureList(ArrayList<Creature> theCreatureList) {
-        this.theCreatureList = theCreatureList;
-    }
-
-    /**
-     * @return the creatureFileName
-     */
-    public String getCreatureFileName() {
-        return creatureFileName;
-    }
-
-    /**
-     * @param creatureFileName the creatureFileName to set
-     */
-    public void setCreatureFileName(String creatureFileName) {
-        this.creatureFileName = creatureFileName;
     }
 }

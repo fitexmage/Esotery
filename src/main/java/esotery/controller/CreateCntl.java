@@ -102,20 +102,6 @@ public class CreateCntl {
     }
 
     /**
-     * @return the theStage
-     */
-    public Stage getTheStage() {
-        return theStage;
-    }
-
-    /**
-     * @param theStage the theStage to set
-     */
-    public void setTheStage(Stage theStage) {
-        this.theStage = theStage;
-    }
-
-    /**
      * @return the theCreateCntl
      */
     public static CreateCntl getTheCreateCntl() {
@@ -125,26 +111,5 @@ public class CreateCntl {
     public static CreateCntl getTheCreateCntl(Stage theStage, int playerID) {
         theCreateCntl = new CreateCntl(theStage, playerID);
         return theCreateCntl;
-    }
-
-    /**
-     * @param aTheCreateCntl the theCreateCntl to set
-     */
-    public static void setTheCreateCntl(CreateCntl aTheCreateCntl) {
-        theCreateCntl = aTheCreateCntl;
-    }
-
-    /**
-     * @return the playerID
-     */
-    public int getPlayerID() {
-        return playerID;
-    }
-
-    /**
-     * @param playerID the playerID to set
-     */
-    public void setPlayerID(int playerID) {
-        this.playerID = playerID;
     }
 }
